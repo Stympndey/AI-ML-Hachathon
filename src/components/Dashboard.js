@@ -4,6 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 import { Activity, Heart, Brain, TrendingUp, Users, Calendar, MessageSquare, Upload, Search, Info, AlertTriangle, CheckCircle } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Cell } from 'recharts';
 import { useNavigate } from 'react-router-dom';
+import EmergencyButton from './EmergencyButton';
 
 // Dynamic health data based on uploaded reports
 const getHealthTrendData = (reports, healthMetrics) => {
@@ -196,6 +197,9 @@ function Dashboard() {
               {currentTime.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
           </div>
+          <div className="flex items-center justify-center lg:justify-end">
+            <EmergencyButton />
+          </div>
         </div>
       </div>
 
@@ -383,7 +387,7 @@ function Dashboard() {
                       '• Use free time for self-care',
                       '• Stay consistent with routine'
                     ]
-                  )}.map((rec, index) => (
+                  ).map((rec, index) => (
                     <li key={index}>{rec}</li>
                   ))}
                 </ul>

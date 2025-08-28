@@ -9,6 +9,7 @@ import AIAssistant from './components/AIAssistant';
 import HealthDataVisualization from './components/HealthDataVisualization';
 import FacilitySearchDark from './components/FacilitySearchDark';
 import DrugInteractionChecker from './components/DrugInteractionChecker';
+import AppointmentConfirmation from './components/AppointmentConfirmation';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/health-data" element={<HealthDataVisualization />} />
                 <Route path="/facilities" element={<FacilitySearchDark />} />
                 <Route path="/drug-checker" element={<DrugInteractionChecker />} />
+                <Route path="/appointment-confirmation" element={<AppointmentConfirmation />} />
               </Routes>
             </main>
           </div>
